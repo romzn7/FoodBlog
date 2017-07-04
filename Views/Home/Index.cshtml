@@ -1,0 +1,11 @@
+﻿@model IEnumerable<blog.Models.Restuarant>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@foreach (var item in Model)
+{
+    <h2>@item.Name</h2>
+    <div>@item.City, @item.Country</div>
+    <hr />
+}
