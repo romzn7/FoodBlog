@@ -200,10 +200,16 @@
     <Compile Include="Controllers\HelloWorldController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\RestuarantsController.cs" />
     <Compile Include="Controllers\ReviewsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201707041253565_InitialCreate.cs" />
+    <Compile Include="Migrations\201707041253565_InitialCreate.Designer.cs">
+      <DependentUpon>201707041253565_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AboutModel.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -211,6 +217,7 @@
     <Compile Include="Models\OdeToFoodDb.cs" />
     <Compile Include="Models\RestaurantReview.cs" />
     <Compile Include="Models\Restuarant.cs" />
+    <Compile Include="Models\RestuarantListViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -231,6 +238,8 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -273,12 +282,20 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Restuarants\Create.cshtml" />
+    <Content Include="Views\Restuarants\Delete.cshtml" />
+    <Content Include="Views\Restuarants\Details.cshtml" />
+    <Content Include="Views\Restuarants\Edit.cshtml" />
+    <Content Include="Views\Restuarants\Index.cshtml" />
+    <Content Include="Views\Reviews\Index.cshtml" />
+    <Content Include="Views\Reviews\_Review.cshtml" />
+    <Content Include="Views\Reviews\Edit.cshtml" />
+    <Content Include="Views\Home\_Restuarants.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Cuisine\" />
     <Folder Include="Views\HelloWorld\" />
-    <Folder Include="Views\Reviews\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -287,6 +304,11 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201707041253565_InitialCreate.resx">
+      <DependentUpon>201707041253565_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

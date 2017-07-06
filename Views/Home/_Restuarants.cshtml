@@ -1,0 +1,11 @@
+﻿@model IEnumerable<blog.Models.RestuarantListViewModel>
+<div id="restuarantList">
+    @foreach (var item in Model)
+    {
+        <h2>@item.Name</h2>
+        <div>@item.City, @item.Country</div>
+        <div>Reviews: @item.CountOfReviews</div>
+        <hr />
+    }
+</div>
+

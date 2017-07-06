@@ -1,3 +1,4 @@
+C:\Users\Bhuyu\Documents\Visual Studio 2015\Projects\blog\blog\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\Bhuyu\Documents\Visual Studio 2015\Projects\blog\blog\bin\ApplicationInsights.config
 C:\Users\Bhuyu\Documents\Visual Studio 2015\Projects\blog\blog\bin\roslyn\csc.exe
 C:\Users\Bhuyu\Documents\Visual Studio 2015\Projects\blog\blog\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -37,7 +38,6 @@ C:\Users\Bhuyu\Documents\Visual Studio 2015\Projects\blog\blog\bin\Microsoft.Owi
 C:\Users\Bhuyu\Documents\Visual Studio 2015\Projects\blog\blog\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
 C:\Users\Bhuyu\Documents\Visual Studio 2015\Projects\blog\blog\bin\Microsoft.Owin.Security.OAuth.dll
 C:\Users\Bhuyu\Documents\Visual Studio 2015\Projects\blog\blog\bin\Microsoft.Owin.Security.Twitter.dll
-C:\Users\Bhuyu\Documents\Visual Studio 2015\Projects\blog\blog\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\Bhuyu\Documents\Visual Studio 2015\Projects\blog\blog\bin\Newtonsoft.Json.dll
 C:\Users\Bhuyu\Documents\Visual Studio 2015\Projects\blog\blog\bin\Owin.dll
 C:\Users\Bhuyu\Documents\Visual Studio 2015\Projects\blog\blog\bin\System.Web.Helpers.dll
@@ -78,5 +78,7 @@ C:\Users\Bhuyu\Documents\Visual Studio 2015\Projects\blog\blog\bin\Microsoft.Owi
 C:\Users\Bhuyu\Documents\Visual Studio 2015\Projects\blog\blog\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Bhuyu\Documents\Visual Studio 2015\Projects\blog\blog\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Bhuyu\Documents\Visual Studio 2015\Projects\blog\blog\obj\Debug\blog.csprojResolveAssemblyReference.cache
+C:\Users\Bhuyu\Documents\Visual Studio 2015\Projects\blog\blog\obj\Debug\blog.Migrations.InitialCreate.resources
+C:\Users\Bhuyu\Documents\Visual Studio 2015\Projects\blog\blog\obj\Debug\blog.csproj.GenerateResource.Cache
 C:\Users\Bhuyu\Documents\Visual Studio 2015\Projects\blog\blog\obj\Debug\blog.dll
 C:\Users\Bhuyu\Documents\Visual Studio 2015\Projects\blog\blog\obj\Debug\blog.pdb

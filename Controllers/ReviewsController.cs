@@ -1,6 +1,7 @@
 ﻿using blog.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -9,50 +10,43 @@ namespace blog.Controllers
 {
     public class ReviewsController : Controller
     {
-        // GET: Reviews
-        //public ActionResult Index()
-        //{
-        //    var model =
-        //            from r in _reviews
-        //            orderby r.Country
-        //            select r;
-        //    return View(model);
-        //}
+        OdeToFoodDb _db = new OdeToFoodDb();
+        public ActionResult Index([Bind(Prefix = "id")]int restuarantId)
+        {
+            var restuarant = _db.Restuarants.Find(restuarantId);
+            if( restuarant != null)
+            {
+                return View(restuarant);
+            }
+            return HttpNotFound();
+        }
 
-        //public ActionResult Edit(int id)
-        //{
-        //    var review = _reviews.Single(r => r.Id == id);
-        //    return View(review);
-        //}
-        //[HttpPost]
-        //public ActionResult Edit(int id, FormCollection collection)
-        //{
-        //    var review = _reviews.Single(r => r.Id == id);
-        //    if (TryUpdateModel(review))
-        //    {
-        //        return RedirectToAction("Index");
-        //    }
-        //    return View(review);
-        //}
-        //static List<RestaurantReview> _reviews = new List<RestaurantReview>
-        //{
-        //    new RestaurantReview
-        //    {
-        //        Id = 1,
-        //        Name = "ABC",
-        //        City = "Kathmandu",
-        //        Country = "Nepal",
-        //        Rating = 5
-        //    },
-        //    new RestaurantReview
-        //    {
-        //        Id = 2,
-        //        Name = "DEF",
-        //        City = "London",
-        //        Country = "England",
-        //        Rating = 5
-        //    }
-        //};
+        [HttpGet]
+        public ActionResult Edit(int id)
+        {
+            var model = _db.Reviews.Find(id);
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(RestaurantReview review)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Entry(review).State = EntityState.Modified;
+                _db.SaveChanges();
+                return RedirectToAction("Index", new { id = review.RestuarantId });
+            }
+            return View(review);
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            _db.Dispose();
+            base.Dispose(disposing);
+        }
+
+
     }
 
     

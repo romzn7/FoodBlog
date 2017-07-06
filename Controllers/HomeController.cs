@@ -10,9 +10,25 @@ namespace blog.Controllers
     public class HomeController : Controller
     {
         OdeToFoodDb _db = new OdeToFoodDb();
-        public ActionResult Index()
+        public ActionResult Index(string searchTerm = null)
         {
-            var model = _db.Restuarants.ToList(); 
+            var model = _db.Restuarants
+                            .OrderByDescending(r => r.Reviews.Average(review => review.Rating))
+                            .Where(r => searchTerm == null || r.Name.StartsWith(searchTerm))
+                            .Take(10)
+                            .Select (r => new RestuarantListViewModel
+                            {
+                                Id = r.id,
+                                Name = r.Name,
+                                City = r.City,
+                                Country = r.Country,
+                                CountOfReviews = r.Reviews.Count()
+                            });
+            if (Request.IsAjaxRequest())
+            {
+                return PartialView("_Restuarants", model);
+            }
+
             return View(model);
         }
 

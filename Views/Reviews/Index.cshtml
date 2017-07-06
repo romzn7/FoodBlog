@@ -1,0 +1,9 @@
+﻿@model blog.Models.Restuarant
+
+<h2> Reviews for @Model.Name </h2>
+
+@Html.Partial("_Review", @Model.Reviews)
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
