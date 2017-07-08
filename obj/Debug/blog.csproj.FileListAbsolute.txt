@@ -82,3 +82,7 @@ C:\Users\Bhuyu\Documents\Visual Studio 2015\Projects\blog\blog\obj\Debug\blog.Mi
 C:\Users\Bhuyu\Documents\Visual Studio 2015\Projects\blog\blog\obj\Debug\blog.csproj.GenerateResource.Cache
 C:\Users\Bhuyu\Documents\Visual Studio 2015\Projects\blog\blog\obj\Debug\blog.dll
 C:\Users\Bhuyu\Documents\Visual Studio 2015\Projects\blog\blog\obj\Debug\blog.pdb
+C:\Users\Bhuyu\Documents\Visual Studio 2015\Projects\blog\blog\bin\PagedList.dll
+C:\Users\Bhuyu\Documents\Visual Studio 2015\Projects\blog\blog\bin\PagedList.Mvc.dll
+C:\Users\Bhuyu\Documents\Visual Studio 2015\Projects\blog\blog\bin\PagedList.xml
+C:\Users\Bhuyu\Documents\Visual Studio 2015\Projects\blog\blog\bin\PagedList.Mvc.xml

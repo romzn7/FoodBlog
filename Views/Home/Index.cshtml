@@ -1,4 +1,4 @@
-﻿@model IEnumerable<blog.Models.RestuarantListViewModel>
+﻿@model IPagedList<RestuarantListViewModel>
 @{
     ViewBag.Title = "Home Page";
 }
@@ -7,14 +7,17 @@
 {
     <script type="text/javascript" src="~/Scripts/jquery-1.7.1.js"></script>
     <script type="text/javascript" src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
-}
+    <link href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="Stylesheet"></link>
+    <script src="YourJquery source path"></script>
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+    }
 
-@*<form method="get" class="form-group">
-    <input type="search" name="searchTerm" class="form-control" />
+<form method="get" class="form-group" action="@Url.Action("Index")" data-otf-ajax="true" data-otf-target="#restuarantList">
+    <input type="search" name="searchTerm" class="form-control" data-otf-autocomplete="@Url.Action("AutoComplete")" />
     <input type="submit" name="Search By Values" class="btn btn-default" />
-</form>*@
+</form>
 
-@using (Ajax.BeginForm("Index", "Home",
+@*@using (Ajax.BeginForm("Index", "Home",
                                         new AjaxOptions
                                         {
                                             HttpMethod = "get",
@@ -24,7 +27,7 @@
  {
     <input type = "search" name = "searchTerm" class="form-control"  />
     <input type="submit" name="Search By Name" class="btn btn-default" />
-}
+}*@
 
 
 

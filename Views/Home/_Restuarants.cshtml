@@ -1,5 +1,12 @@
-﻿@model IEnumerable<blog.Models.RestuarantListViewModel>
+﻿@model IPagedList<RestuarantListViewModel>
 <div id="restuarantList">
+
+    <div class="pagedList" data-otf-target="#restuarantList">
+
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page }),
+                            PagedListRenderOptions.MinimalWithItemCountText)
+    </div>
+
     @foreach (var item in Model)
     {
         <h2>@item.Name</h2>
