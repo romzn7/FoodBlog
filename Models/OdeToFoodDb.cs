@@ -12,6 +12,7 @@ namespace blog.Models
         {
 
         }
+        public DbSet<UserProfile> UserProfiles { get; set; }
         public DbSet<Restuarant> Restuarants { get; set; }
         public DbSet<RestaurantReview> Reviews { get; set; }
     }

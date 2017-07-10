@@ -23,6 +23,8 @@ namespace blog.Controllers
                             });
             return Json(model, JsonRequestBehavior.AllowGet);
         }
+
+        [OutputCache(CacheProfile = "Long", VaryByHeader = "X-Requested-With", Location = System.Web.UI.OutputCacheLocation.Server )]
         public ActionResult Index(string searchTerm = null, int page = 1)
         {
             var model = _db.Restuarants
